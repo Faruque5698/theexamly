@@ -1,0 +1,2066 @@
+*,
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  outline: none !important;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #616161;
+  position: relative;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@keyframes navbarAnimationFrom {
+  0% {
+    top: -70px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+.bg_white {
+  background-color: #ffffff !important;
+}
+
+.text_color_primary {
+  color: #212121;
+}
+
+.primary_color {
+  color: #036a99;
+}
+
+.secondary_color {
+  color: #15aabf;
+}
+
+.hover_primary_color:hover {
+  color: #036a99;
+}
+
+.hover_secondary_color:hover {
+  color: #15aabf;
+}
+
+.btn_primary {
+  padding: 10px 10px;
+  background-color: rgba(0, 117, 138, 0.1);
+  color: #212121;
+  font-size: 16px;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid transparent;
+}
+.btn_primary span {
+  z-index: 1;
+  position: relative;
+}
+.btn_primary::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50px;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1), transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  background-color: #00758a;
+  opacity: 0;
+}
+.btn_primary:hover span {
+  color: #ffffff;
+}
+.btn_primary:hover::before {
+  opacity: 1;
+  transition-duration: 0.85s;
+  transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+}
+
+.pagination .page_item.active .page_link {
+  background-color: #036a99 !important;
+  color: #ffffff;
+  border-color: #036a99 !important;
+}
+.pagination .page_item .page_link {
+  color: #212121;
+}
+.pagination .page_item .page_link:hover {
+  background-color: #15aabf;
+  color: #ffffff;
+}
+.pagination .page_item .page_link:focus {
+  box-shadow: unset;
+}
+
+.navbar_top {
+  background-color: #f1fbff;
+}
+.navbar_top .left_navbar_top {
+  font-size: 14px;
+}
+.navbar_top .left_navbar_top .link {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #15aabf;
+}
+.navbar_top .left_navbar_top .link:hover {
+  color: #036a99;
+}
+.navbar_top .right_navbar_top .btn_primary {
+  padding: 8px 15px;
+  background-color: rgba(0, 117, 138, 0.1);
+  color: #212121;
+  font-size: 14px;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid transparent;
+}
+.navbar_top .right_navbar_top .btn_primary span {
+  z-index: 1;
+  position: relative;
+}
+.navbar_top .right_navbar_top .btn_primary::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50px;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1), transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  background-color: #00758a;
+  opacity: 0;
+}
+.navbar_top .right_navbar_top .btn_primary:hover span {
+  color: #ffffff;
+}
+.navbar_top .right_navbar_top .btn_primary:hover::before {
+  opacity: 1;
+  transition-duration: 0.85s;
+  transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+}
+
+.navbar_main .navbar_toggler_icon {
+  line-height: 1.5em;
+}
+.navbar_main .navbar_toggler_icon i {
+  color: #036a99;
+}
+.navbar_main.sps--abv {
+  background-color: #ffffff;
+  transition: all 300ms ease-in-out;
+}
+.navbar_main.sps--abv .navbar_nav .nav_item.show .nav_link {
+  color: #00758a !important;
+}
+.navbar_main.sps--abv .navbar_nav .nav_item .nav_link {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #15aabf;
+  padding: 30px 10px;
+  transition: all 300ms ease-in-out;
+}
+.navbar_main.sps--abv .navbar_nav .nav_item .nav_link:hover {
+  color: #00758a !important;
+}
+.navbar_main.sps--abv .navbar_nav .nav_item .nav_link.active {
+  color: #00758a !important;
+}
+.navbar_main.sps--abv .navbar_nav .nav_item .nav_link i {
+  font-size: 14px;
+}
+.navbar_main.sps--abv .navbar_nav .nav_item .dropdown_menu {
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+  background: #ffffff;
+  padding: 0;
+  border: none;
+  border-radius: unset;
+  margin: 0;
+}
+.navbar_main.sps--abv .navbar_nav .nav_item .dropdown_menu .dropdown_item {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #15aabf;
+  padding: 10px 24px;
+  transition: all 300ms ease-in-out;
+}
+.navbar_main.sps--abv .navbar_nav .nav_item .dropdown_menu .dropdown_item:hover {
+  background-color: rgba(21, 170, 191, 0.1);
+  color: #00758a !important;
+}
+.navbar_main.sps--blw {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1020;
+  background-color: #ffffff;
+  transition: all 300ms ease-in-out;
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+}
+.navbar_main.sps--blw .navbar_nav .nav_item.active .nav_link {
+  color: #00758a !important;
+}
+.navbar_main.sps--blw .navbar_nav .nav_item.show .nav_link {
+  color: #00758a !important;
+}
+.navbar_main.sps--blw .navbar_nav .nav_item .nav_link {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #15aabf;
+  padding: 20px 5px;
+  transition: all 300ms ease-in-out;
+}
+.navbar_main.sps--blw .navbar_nav .nav_item .nav_link:hover {
+  color: #00758a !important;
+}
+.navbar_main.sps--blw .navbar_nav .nav_item .nav_link.active {
+  color: #00758a !important;
+}
+.navbar_main.sps--blw .navbar_nav .nav_item .nav_link i {
+  font-size: 14px;
+}
+.navbar_main.sps--blw .navbar_nav .nav_item .dropdown_menu {
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+  background: #ffffff;
+  padding: 0;
+  border: none;
+  border-radius: unset;
+  margin: 0;
+}
+.navbar_main.sps--blw .navbar_nav .nav_item .dropdown_menu .dropdown_item {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #15aabf;
+  padding: 10px 24px;
+  transition: all 300ms ease-in-out;
+}
+.navbar_main.sps--blw .navbar_nav .nav_item .dropdown_menu .dropdown_item:hover {
+  background-color: rgba(21, 170, 191, 0.1);
+  color: #00758a !important;
+}
+.navbar_main.sps--blw {
+  animation: navbarAnimationFrom 300ms ease-in-out;
+}
+
+.banner {
+  background-color: #15aabf;
+  position: relative;
+}
+.banner::after {
+  position: absolute;
+  content: "";
+  background: url("../images/banner/1.png");
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+  bottom: 0;
+}
+.banner .carousel_inner {
+  padding: 70px 0px;
+}
+.banner .carousel_caption {
+  position: absolute;
+  right: unset;
+  bottom: unset;
+  left: 50%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.banner .carousel_item {
+  padding: 170px 0px;
+}
+.banner .banner_text .header {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+.banner .banner_text .header span {
+  color: #00758a;
+}
+.banner .banner_text .paragraph {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #ffffff;
+  max-width: 600px;
+  margin-bottom: 0;
+  margin: 25px 0px;
+}
+.banner .banner_text .paragraph span {
+  color: #00758a;
+}
+.banner .banner_text .banner_action .get_stared.btn_primary {
+  padding: 10px 20px;
+  background-color: #00758a;
+  color: #ffffff;
+  font-size: 16px;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid transparent;
+}
+.banner .banner_text .banner_action .get_stared.btn_primary span {
+  z-index: 1;
+  position: relative;
+}
+.banner .banner_text .banner_action .get_stared.btn_primary::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50px;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1), transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  background-color: #00758a;
+  opacity: 0;
+}
+.banner .banner_text .banner_action .get_stared.btn_primary:hover span {
+  color: #ffffff;
+}
+.banner .banner_text .banner_action .get_stared.btn_primary:hover::before {
+  opacity: 1;
+  transition-duration: 0.85s;
+  transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+}
+.banner .banner_text .banner_action .btn_primary {
+  padding: 10px 20px;
+  background-color: rgba(0, 117, 138, 0.1);
+  color: #ffffff;
+  font-size: 16px;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid transparent;
+}
+.banner .banner_text .banner_action .btn_primary span {
+  z-index: 1;
+  position: relative;
+}
+.banner .banner_text .banner_action .btn_primary::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50px;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1), transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  background-color: #00758a;
+  opacity: 0;
+}
+.banner .banner_text .banner_action .btn_primary:hover span {
+  color: #ffffff;
+}
+.banner .banner_text .banner_action .btn_primary:hover::before {
+  opacity: 1;
+  transition-duration: 0.85s;
+  transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+}
+
+.about_us {
+  padding-top: 80px;
+}
+.about_us_header_text .header {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 1;
+  color: #424242;
+}
+.about_us_header_text .paragraph {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #525252;
+}
+.about_us_text {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #525252;
+  text-align: justify;
+}
+.about_us_video {
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+}
+
+.about_us_video .html_video {
+  width: 100%;
+  height: 350px;
+}
+
+.about_us_image {
+  position: relative;
+}
+.about_us_image .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.about_us_image .overlay .play_icon i {
+  width: 50px;
+  height: 50px;
+  background-color: #036a99;
+  color: #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+}
+
+.top_courses {
+  padding-top: 80px;
+}
+.top_courses .top_courses_text .header {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 1;
+  color: #424242;
+}
+.top_courses .top_courses_text .paragraph {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #525252;
+}
+.top_courses .top_courses_text .top_courses_action .btn_primary {
+  padding: 10px 15px;
+  background-color: rgba(0, 117, 138, 0.1);
+  color: #212121;
+  font-size: 16px;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid transparent;
+}
+.top_courses .top_courses_text .top_courses_action .btn_primary span {
+  z-index: 1;
+  position: relative;
+}
+.top_courses .top_courses_text .top_courses_action .btn_primary::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50px;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1), transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  background-color: #00758a;
+  opacity: 0;
+}
+.top_courses .top_courses_text .top_courses_action .btn_primary:hover span {
+  color: #ffffff;
+}
+.top_courses .top_courses_text .top_courses_action .btn_primary:hover::before {
+  opacity: 1;
+  transition-duration: 0.85s;
+  transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+}
+.top_courses .single_courses {
+  border-radius: 5px;
+  margin-bottom: 30px;
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+}
+.top_courses .single_courses .course_body .title {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #424242;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 300ms ease-in-out;
+}
+.top_courses .single_courses .course_body .title:hover {
+  color: #15aabf;
+}
+.top_courses .single_courses .course_body .sub_title {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #525252;
+}
+.top_courses .single_courses .course_body .courses_footer .course_info .amount, .top_courses .single_courses .course_body .courses_footer .course_info .enrolled_users, .top_courses .single_courses .course_body .courses_footer .course_info .course_duration {
+  padding: 2px 5px;
+  border-radius: 50px;
+  background-color: rgba(0, 95, 83, 0.1);
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #005f53;
+}
+.top_courses .single_courses .course_body .courses_footer .course_info .enrolled_users {
+  background-color: rgba(230, 156, 36, 0.1);
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  color: #e69c24;
+}
+.top_courses .single_courses .course_body .courses_footer .course_info .course_duration {
+  background-color: rgba(178, 54, 77, 0.1);
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  color: #b2364d;
+}
+.top_courses .single_courses .course_body .courses_footer .course_action .btn_primary {
+  padding: 8px 10px;
+  background-color: rgba(0, 117, 138, 0.1);
+  color: #212121;
+  font-size: 16px;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid transparent;
+}
+.top_courses .single_courses .course_body .courses_footer .course_action .btn_primary span {
+  z-index: 1;
+  position: relative;
+}
+.top_courses .single_courses .course_body .courses_footer .course_action .btn_primary::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50px;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1), transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  background-color: #00758a;
+  opacity: 0;
+}
+.top_courses .single_courses .course_body .courses_footer .course_action .btn_primary:hover span {
+  color: #ffffff;
+}
+.top_courses .single_courses .course_body .courses_footer .course_action .btn_primary:hover::before {
+  opacity: 1;
+  transition-duration: 0.85s;
+  transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+}
+
+.search_box .search_box_form {
+  padding: 40px 70px;
+  border-radius: 15px;
+  background-color: rgba(0, 117, 138, 0.1);
+  box-shadow: 0 1rem 3rem rgba(3, 106, 153, 0.175);
+}
+.search_box .search_box_form .form_control {
+  padding: 10px 50px 10px 25px;
+  border: 1px solid transparent;
+  width: 750px;
+  height: 70px;
+}
+.search_box .search_box_form .form_control::placeholder {
+  color: #525252;
+}
+.search_box .search_box_form .form_control:focus {
+  box-shadow: unset;
+  border: 1px solid #00758a;
+}
+.search_box .search_box_form .form_control:focus::placeholder {
+  color: #15aabf;
+}
+.search_box .search_box_form .search_box_btn {
+  padding: 0px 25px;
+  background-color: #00758a;
+}
+.search_box .search_box_form .search_box_btn i {
+  color: #ffffff;
+  font-size: 20px;
+}
+.search_box .search_box_form .search_box_btn:focus {
+  box-shadow: unset;
+}
+
+.top_books {
+  padding-top: 50px;
+}
+.top_books .top_books_text .header {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 1;
+  color: #424242;
+}
+.top_books .top_books_text .paragraph {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #525252;
+}
+.top_books .top_books_text .top_books_action .btn_primary {
+  padding: 10px 15px;
+  background-color: rgba(0, 117, 138, 0.1);
+  color: #212121;
+  font-size: 16px;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid transparent;
+}
+.top_books .top_books_text .top_books_action .btn_primary span {
+  z-index: 1;
+  position: relative;
+}
+.top_books .top_books_text .top_books_action .btn_primary::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50px;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1), transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  background-color: #00758a;
+  opacity: 0;
+}
+.top_books .top_books_text .top_books_action .btn_primary:hover span {
+  color: #ffffff;
+}
+.top_books .top_books_text .top_books_action .btn_primary:hover::before {
+  opacity: 1;
+  transition-duration: 0.85s;
+  transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+}
+.top_books .single_book {
+  border-radius: 5px;
+  margin-bottom: 30px;
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+}
+.top_books .single_book_body .title {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #424242;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 300ms ease-in-out;
+}
+.top_books .single_book_body .title:hover {
+  color: #15aabf;
+}
+.top_books .single_book_body .sub_title {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #525252;
+}
+
+.achievements {
+  padding-top: 50px;
+}
+.achievements_content_text .header {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 1;
+  color: #424242;
+}
+.achievements_content_text .paragraph {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #525252;
+}
+.achievements .single_achivement {
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+.achievements .single_achivement .icon i {
+  padding: 15px;
+  background-color: #00758a;
+  border-radius: 50px;
+  color: #ffffff;
+  font-size: 20px;
+}
+.achievements .single_achivement .header {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  color: #424242;
+}
+.achievements .single_achivement .paragraph {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #525252;
+}
+
+.tesimonials {
+  padding-top: 50px;
+}
+.tesimonials_text .header {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 1;
+  color: #424242;
+}
+.tesimonials_text .paragraph {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #525252;
+  width: 50%;
+}
+.tesimonials_slider .carousel_indicators {
+  position: absolute;
+  right: 0;
+  bottom: 60px;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin-right: 15%;
+  margin-left: 15%;
+  list-style: none;
+  align-items: center;
+}
+.tesimonials_slider .carousel_indicators_list {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+  margin-left: 5px;
+  text-indent: unset;
+  cursor: pointer;
+  background-color: unset;
+  background-clip: padding-box;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  opacity: 0.5;
+  transition: opacity 0.6s ease;
+}
+.tesimonials_slider .carousel_indicators_list.active {
+  opacity: 1;
+  width: 55px;
+  height: 55px;
+}
+.tesimonials_slider .carousel_indicators_list.active .carousel_indicators_image .img {
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+}
+.tesimonials_slider .carousel .carousel_inner {
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+}
+.tesimonials_slider .carousel .carousel_inner .carousel_item {
+  padding-top: 70px;
+  padding-bottom: 121px;
+}
+.tesimonials_slider .carousel .carousel_inner .carousel_item .paragraph {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #525252;
+  max-width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.tesimonials_slider .carousel .carousel_inner .carousel_item .header {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  color: #424242;
+}
+.tesimonials_slider .carousel .carousel_inner .carousel_item .header span {
+  color: #00758a;
+}
+.tesimonials_slider .carousel .carousel_inner .carousel_item .sub_header {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #525252;
+}
+
+.blog {
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+.blog_text .header {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 1;
+  color: #424242;
+}
+.blog_text .paragraph {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #525252;
+}
+.blog_text .blog_text_action .btn_primary {
+  padding: 10px 15px;
+  background-color: rgba(0, 117, 138, 0.1);
+  color: #212121;
+  font-size: 16px;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid transparent;
+}
+.blog_text .blog_text_action .btn_primary span {
+  z-index: 1;
+  position: relative;
+}
+.blog_text .blog_text_action .btn_primary::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50px;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1), transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  background-color: #00758a;
+  opacity: 0;
+}
+.blog_text .blog_text_action .btn_primary:hover span {
+  color: #ffffff;
+}
+.blog_text .blog_text_action .btn_primary:hover::before {
+  opacity: 1;
+  transition-duration: 0.85s;
+  transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+}
+.blog .single_blog, .blog .blog_page .single_blog_main, .blog_page .blog .single_blog_main {
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+  margin-bottom: 30px;
+}
+.blog .single_blog .blog_body .title, .blog .blog_page .single_blog_main .blog_body .title, .blog_page .blog .single_blog_main .blog_body .title {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #424242;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 300ms ease-in-out;
+}
+.blog .single_blog .blog_body .title:hover, .blog .blog_page .single_blog_main .blog_body .title:hover, .blog_page .blog .single_blog_main .blog_body .title:hover {
+  color: #15aabf;
+}
+.blog .single_blog .blog_body .paragraph, .blog .blog_page .single_blog_main .blog_body .paragraph, .blog_page .blog .single_blog_main .blog_body .paragraph {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #525252;
+  max-width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  padding: 7px 0px;
+}
+.blog .single_blog .blog_body .blog_action .btn_primary, .blog .blog_page .single_blog_main .blog_body .blog_action .btn_primary, .blog_page .blog .single_blog_main .blog_body .blog_action .btn_primary {
+  padding: 5px 10px;
+  background-color: rgba(0, 117, 138, 0.1);
+  color: #212121;
+  font-size: 16px;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid transparent;
+}
+.blog .single_blog .blog_body .blog_action .btn_primary span, .blog .blog_page .single_blog_main .blog_body .blog_action .btn_primary span, .blog_page .blog .single_blog_main .blog_body .blog_action .btn_primary span {
+  z-index: 1;
+  position: relative;
+}
+.blog .single_blog .blog_body .blog_action .btn_primary::before, .blog .blog_page .single_blog_main .blog_body .blog_action .btn_primary::before, .blog_page .blog .single_blog_main .blog_body .blog_action .btn_primary::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50px;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1), transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  background-color: #00758a;
+  opacity: 0;
+}
+.blog .single_blog .blog_body .blog_action .btn_primary:hover span, .blog .blog_page .single_blog_main .blog_body .blog_action .btn_primary:hover span, .blog_page .blog .single_blog_main .blog_body .blog_action .btn_primary:hover span {
+  color: #ffffff;
+}
+.blog .single_blog .blog_body .blog_action .btn_primary:hover::before, .blog .blog_page .single_blog_main .blog_body .blog_action .btn_primary:hover::before, .blog_page .blog .single_blog_main .blog_body .blog_action .btn_primary:hover::before {
+  opacity: 1;
+  transition-duration: 0.85s;
+  transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+}
+
+.blog_page {
+  padding: 80px 0px;
+}
+.blog_page .single_blog, .blog_page .single_blog_main {
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+  margin-bottom: 30px;
+}
+.blog_page .single_blog .blog_body .title, .blog_page .single_blog_main .blog_body .title {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  color: #424242;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 300ms ease-in-out;
+}
+.blog_page .single_blog .blog_body .title:hover, .blog_page .single_blog_main .blog_body .title:hover {
+  color: #15aabf;
+}
+.blog_page .single_blog .blog_body .paragraph, .blog_page .single_blog_main .blog_body .paragraph {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #525252;
+  max-width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  padding: 7px 0px;
+}
+.blog_page .single_blog .blog_body .blog_action .btn_primary, .blog_page .single_blog_main .blog_body .blog_action .btn_primary {
+  padding: 5px 10px;
+  background-color: rgba(0, 117, 138, 0.1);
+  color: #212121;
+  font-size: 16px;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid transparent;
+}
+.blog_page .single_blog .blog_body .blog_action .btn_primary span, .blog_page .single_blog_main .blog_body .blog_action .btn_primary span {
+  z-index: 1;
+  position: relative;
+}
+.blog_page .single_blog .blog_body .blog_action .btn_primary::before, .blog_page .single_blog_main .blog_body .blog_action .btn_primary::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50px;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1), transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  background-color: #00758a;
+  opacity: 0;
+}
+.blog_page .single_blog .blog_body .blog_action .btn_primary:hover span, .blog_page .single_blog_main .blog_body .blog_action .btn_primary:hover span {
+  color: #ffffff;
+}
+.blog_page .single_blog .blog_body .blog_action .btn_primary:hover::before, .blog_page .single_blog_main .blog_body .blog_action .btn_primary:hover::before {
+  opacity: 1;
+  transition-duration: 0.85s;
+  transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+}
+.blog_page .blog_sidebar {
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+  padding: 30px;
+}
+.blog_page .blog_sidebar .blog_search {
+  background-color: rgba(0, 117, 138, 0.1);
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+}
+.blog_page .blog_sidebar .blog_search .form_control {
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #ffffff;
+  height: 50px;
+}
+.blog_page .blog_sidebar .blog_search .form_control::placeholder {
+  color: #525252;
+}
+.blog_page .blog_sidebar .blog_search .form_control:focus {
+  box-shadow: unset;
+  border: 1px solid #00758a;
+}
+.blog_page .blog_sidebar .blog_search .form_control:focus::placeholder {
+  color: #15aabf;
+}
+.blog_page .blog_sidebar .blog_search .search_box_btn {
+  padding: 0px 10px;
+  background-color: #00758a;
+}
+.blog_page .blog_sidebar .blog_search .search_box_btn i {
+  color: #ffffff;
+  font-size: 20px;
+}
+.blog_page .blog_sidebar .blog_search .search_box_btn:focus {
+  box-shadow: unset;
+}
+.blog_page .blog_sidebar .recent_blog_stories .header {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  color: #424242;
+}
+.blog_page .blog_sidebar .recent_blog_stories .single_recent_blog {
+  margin-bottom: 10px;
+}
+.blog_page .blog_sidebar .recent_blog_stories .single_recent_blog .img {
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+}
+.blog_page .blog_sidebar .recent_blog_stories .single_recent_blog .title {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  color: #424242;
+}
+.blog_page .blog_sidebar .recent_blog_stories .single_recent_blog .title:hover {
+  color: #036a99;
+}
+.blog_page .blog_sidebar .blog_tag .header {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  color: #424242;
+}
+.blog_page .blog_sidebar .blog_tag .blog_tag_link {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #424242;
+  transition: all 300ms ease-in-out;
+  text-decoration: none;
+  box-shadow: 0 0.125rem 0.25rem rgba(3, 106, 153, 0.075);
+  margin-bottom: 5px;
+}
+.blog_page .blog_sidebar .blog_tag .blog_tag_link:hover {
+  color: #036a99;
+  text-decoration: underline;
+}
+
+.blog_details_page {
+  padding: 80px 0px;
+}
+.blog_details_page .blog_details_main {
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+  margin-bottom: 30px;
+}
+.blog_details_page .blog_details_main .blog_body .title {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  color: #424242;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 300ms ease-in-out;
+}
+.blog_details_page .blog_details_main .blog_body .text {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #525252;
+}
+.blog_details_page .blog_details_main .blog_body .blog_footer .tags .header {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #525252;
+}
+.blog_details_page .blog_details_main .blog_body .blog_footer .tags a {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #525252;
+  margin-right: 5px;
+  transition: all 300ms ease-in-out;
+}
+.blog_details_page .blog_details_main .blog_body .blog_footer .tags a:hover {
+  color: #036a99;
+}
+.blog_details_page .blog_details_main .blog_body .blog_footer .share_icons .header {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #525252;
+}
+.blog_details_page .blog_details_main .blog_body .blog_footer .share_icons a i {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+  color: #036a99;
+  transition: all 300ms ease-in-out;
+}
+.blog_details_page .blog_details_main .blog_body .blog_footer .share_icons a i:hover {
+  box-shadow: unset;
+}
+.blog_details_page .blog_sidebar {
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+  padding: 30px;
+}
+.blog_details_page .blog_sidebar .blog_search {
+  background-color: rgba(0, 117, 138, 0.1);
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+}
+.blog_details_page .blog_sidebar .blog_search .form_control {
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #ffffff;
+  height: 50px;
+}
+.blog_details_page .blog_sidebar .blog_search .form_control::placeholder {
+  color: #525252;
+}
+.blog_details_page .blog_sidebar .blog_search .form_control:focus {
+  box-shadow: unset;
+  border: 1px solid #00758a;
+}
+.blog_details_page .blog_sidebar .blog_search .form_control:focus::placeholder {
+  color: #15aabf;
+}
+.blog_details_page .blog_sidebar .blog_search .search_box_btn {
+  padding: 0px 10px;
+  background-color: #00758a;
+}
+.blog_details_page .blog_sidebar .blog_search .search_box_btn i {
+  color: #ffffff;
+  font-size: 20px;
+}
+.blog_details_page .blog_sidebar .blog_search .search_box_btn:focus {
+  box-shadow: unset;
+}
+.blog_details_page .blog_sidebar .recent_blog_stories .header {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  color: #424242;
+}
+.blog_details_page .blog_sidebar .recent_blog_stories .single_recent_blog {
+  margin-bottom: 10px;
+}
+.blog_details_page .blog_sidebar .recent_blog_stories .single_recent_blog .img {
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+}
+.blog_details_page .blog_sidebar .recent_blog_stories .single_recent_blog .title {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  color: #424242;
+}
+.blog_details_page .blog_sidebar .recent_blog_stories .single_recent_blog .title:hover {
+  color: #036a99;
+}
+.blog_details_page .blog_sidebar .blog_tag .header {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  color: #424242;
+}
+.blog_details_page .blog_sidebar .blog_tag .blog_tag_link {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #424242;
+  transition: all 300ms ease-in-out;
+  text-decoration: none;
+  box-shadow: 0 0.125rem 0.25rem rgba(3, 106, 153, 0.075);
+  margin-bottom: 5px;
+}
+.blog_details_page .blog_sidebar .blog_tag .blog_tag_link:hover {
+  color: #036a99;
+  text-decoration: underline;
+}
+
+.use_gide {
+  padding: 80px 0px;
+}
+.use_gide_content .card {
+  transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 0;
+  margin-bottom: 16px;
+  text-align: left;
+  -webkit-box-shadow: 0 3px 10px 0 rgba(3, 106, 153, 0.1);
+  box-shadow: 0 3px 10px 0 rgba(3, 106, 153, 0.1);
+}
+.use_gide_content .card:hover {
+  -webkit-box-shadow: 0 3px 15px rgba(3, 106, 153, 0.2) !important;
+  box-shadow: 0 3px 15px rgba(3, 106, 153, 0.2) !important;
+}
+.use_gide_content .card-header {
+  background-color: #ffffff;
+  padding: unset;
+}
+.use_gide_content .card-header button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  color: #424242;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 15px 10px;
+}
+.use_gide_content .card-header button:focus {
+  box-shadow: unset;
+}
+.use_gide_content .card-header button::after {
+  font-family: "font awesome 5 free";
+  font-weight: 900;
+  content: "\f128";
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  color: #15aabf;
+}
+.use_gide_content .card-header button.collapsed {
+  color: #424242;
+}
+.use_gide_content .card-header button.collapsed::after {
+  content: "\f059";
+  color: #036a99;
+}
+.use_gide_text {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #525252;
+  text-align: justify;
+}
+.use_gide_video {
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+}
+
+.use_gide_video .html_video {
+  width: 100%;
+  height: 270px;
+}
+
+.use_gide_image .body {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #ffffff;
+  background-color: #036a99;
+}
+
+.courses_filter {
+  padding: 80px 0px;
+}
+.courses_filter .courses_sidebar_filter .courses_free_or__paid {
+  padding: 15px 25px;
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+}
+.courses_filter .courses_sidebar_filter .courses_free_or__paid_form_label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.courses_filter .courses_sidebar_filter .courses_free_or__paid_form_label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.courses_filter .courses_sidebar_filter .courses_free_or__paid_form_label .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #15aabf;
+}
+.courses_filter .courses_sidebar_filter .courses_free_or__paid_form_label input:checked ~ .checkmark {
+  background-color: #15aabf;
+}
+.courses_filter .courses_sidebar_filter .courses_free_or__paid_form_label input:checked ~ .checkmark:after {
+  display: block;
+}
+.courses_filter .courses_sidebar_filter .courses_free_or__paid_form_label .checkmark:after {
+  left: 9px;
+  top: 3px;
+  width: 8px;
+  height: 15px;
+  border: solid #ffffff;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.courses_filter .courses_sidebar_filter .courses_free_or__paid_form .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.courses_filter .courses_sidebar_filter .courses_category {
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+}
+.courses_filter .courses_sidebar_filter .courses_category_accordion .accordion_card {
+  background-color: unset;
+  border: unset;
+  border-radius: unset;
+}
+.courses_filter .courses_sidebar_filter .courses_category_accordion .accordion_card .accordion_header {
+  padding: unset;
+  background-color: unset;
+  border-bottom: unset;
+}
+.courses_filter .courses_sidebar_filter .courses_category_accordion .accordion_card .accordion_header .header {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  color: #15aabf;
+  position: relative;
+  cursor: pointer;
+  padding: 15px 20px;
+}
+.courses_filter .courses_sidebar_filter .courses_category_accordion .accordion_card .accordion_header .header:hover {
+  background-color: rgba(157, 173, 188, 0.1);
+}
+.courses_filter .courses_sidebar_filter .courses_category_accordion .accordion_card .accordion_header .header::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f077";
+  top: 50%;
+  right: 10px;
+  color: #15aabf;
+  position: absolute;
+  font-size: 16px;
+  font-weight: 700;
+  transform: translateY(-50%);
+}
+.courses_filter .courses_sidebar_filter .courses_category_accordion .accordion_card .accordion_header .header:not(.collapsed) {
+  background-color: rgba(21, 170, 191, 0.05);
+}
+.courses_filter .courses_sidebar_filter .courses_category_accordion .accordion_card .accordion_header .header.collapsed {
+  color: #424242;
+  font-weight: 500;
+}
+.courses_filter .courses_sidebar_filter .courses_category_accordion .accordion_card .accordion_header .header.collapsed::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f078";
+  top: 50%;
+  right: 10px;
+  color: #424242;
+  position: absolute;
+  font-size: 16px;
+  font-weight: 700;
+  transform: translateY(-50%);
+}
+.courses_filter .courses_sidebar_filter .courses_category_accordion .accordion_card .accordion_body {
+  padding: 0px;
+}
+.courses_filter .courses_sidebar_filter .courses_category_accordion .accordion_card .accordion_body .sub_menu .courses_category_accordion .accordion_card .accordion_header .header {
+  padding: 15px 25px;
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #424242;
+}
+.courses_filter .courses_sidebar_filter .courses_category_accordion .accordion_card .accordion_body .sub_menu .courses_category_accordion .accordion_card .accordion_body .sub_menu_link {
+  padding: 15px 30px;
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #424242;
+}
+.courses_filter .courses_sidebar_filter .courses_category_accordion .accordion_card .accordion_body .sub_menu_link {
+  display: block;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #424242;
+  position: relative;
+}
+.courses_filter .courses_sidebar_filter .courses_category_accordion .accordion_card .accordion_body .sub_menu_link.active {
+  background-color: rgba(157, 173, 188, 0.1);
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  color: #15aabf !important;
+}
+.courses_filter .courses_sidebar_filter .courses_category_accordion .accordion_card .accordion_body .sub_menu_link.active::before {
+  color: #15aabf;
+}
+.courses_filter .courses_sidebar_filter .courses_category_accordion .accordion_card .accordion_body .sub_menu_link:hover {
+  background-color: rgba(157, 173, 188, 0.1);
+}
+.courses_filter .courses_sidebar_filter .courses_category_accordion .accordion_card .accordion_body .sub_menu_link::before {
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  content: "\f054";
+  top: 50%;
+  right: 10px;
+  color: #424242;
+  position: absolute;
+  font-size: 16px;
+  font-weight: 700;
+  transform: translateY(-50%);
+}
+.courses_filter .courses_heading_filter .sort_filter .form_control {
+  color: #424242;
+}
+.courses_filter .courses_heading_filter .sort_filter .form_control:focus {
+  border-color: #036a99;
+  box-shadow: unset;
+}
+.courses_filter .single_courses {
+  border-radius: 5px;
+  margin-bottom: 30px;
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+}
+.courses_filter .single_courses .course_body .title {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #424242;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 300ms ease-in-out;
+}
+.courses_filter .single_courses .course_body .title:hover {
+  color: #15aabf;
+}
+.courses_filter .single_courses .course_body .sub_title {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #525252;
+}
+.courses_filter .single_courses .course_body .courses_footer .course_info .amount, .courses_filter .single_courses .course_body .courses_footer .course_info .enrolled_users, .courses_filter .single_courses .course_body .courses_footer .course_info .course_duration {
+  padding: 2px 5px;
+  border-radius: 50px;
+  background-color: rgba(0, 95, 83, 0.1);
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #005f53;
+}
+.courses_filter .single_courses .course_body .courses_footer .course_info .enrolled_users {
+  background-color: rgba(230, 156, 36, 0.1);
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  color: #e69c24;
+}
+.courses_filter .single_courses .course_body .courses_footer .course_info .course_duration {
+  background-color: rgba(178, 54, 77, 0.1);
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  color: #b2364d;
+}
+.courses_filter .single_courses .course_body .courses_footer .course_action .btn_primary {
+  padding: 5px 5px;
+  background-color: rgba(0, 117, 138, 0.1);
+  color: #212121;
+  font-size: 12px;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid transparent;
+}
+.courses_filter .single_courses .course_body .courses_footer .course_action .btn_primary span {
+  z-index: 1;
+  position: relative;
+}
+.courses_filter .single_courses .course_body .courses_footer .course_action .btn_primary::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50px;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1), transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  background-color: #00758a;
+  opacity: 0;
+}
+.courses_filter .single_courses .course_body .courses_footer .course_action .btn_primary:hover span {
+  color: #ffffff;
+}
+.courses_filter .single_courses .course_body .courses_footer .course_action .btn_primary:hover::before {
+  opacity: 1;
+  transition-duration: 0.85s;
+  transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+}
+
+.course_details .course_details_nav {
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+}
+.course_details .course_details_nav .nav_link {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  color: #424242;
+  padding: 15px 10px;
+}
+.course_details .course_details_nav .nav_link:hover {
+  background-color: rgba(157, 173, 188, 0.1);
+}
+.course_details .course_details_nav .nav_link.active {
+  background-color: rgba(157, 173, 188, 0.1);
+}
+.course_details .tab_content {
+  box-shadow: 0 0.125rem 0.25rem rgba(3, 106, 153, 0.075);
+}
+.course_details .tab_content .about_course_details .header {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #424242;
+}
+.course_details .tab_content .about_course_details .icons .single_icon_box .icon {
+  background-color: #15aabf;
+  padding: 10px;
+  border-radius: 5px;
+  color: #ffffff;
+}
+.course_details .tab_content .about_course_details .icons .single_icon_box .icon i {
+  font-size: 16px;
+}
+.course_details .tab_content .about_course_details .icons .single_icon_box .paragraph {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #616161;
+  padding: 5px 0px;
+  margin-bottom: 0;
+}
+.course_details .tab_content .course_content_text .icon {
+  font-size: 20px;
+  color: #15aabf;
+}
+.course_details .tab_content .course_content_text .text {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #424242;
+}
+.course_details .tab_content .course_content .sub_list {
+  margin-left: 25px;
+}
+.course_details .tab_content .course_content .sub_list .course_content_text .icon {
+  font-size: 14px;
+  color: #15aabf;
+}
+.course_details .tab_content .course_content .sub_list .course_content_text .text {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #424242;
+}
+.course_details .tab_content .faq .title {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #424242;
+}
+.course_details .tab_content .faq .paragraph {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #616161;
+}
+.course_details .course_purchege_cart {
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+}
+.course_details .course_purchege_cart_video {
+  position: relative;
+}
+.course_details .course_purchege_cart_video .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.course_details .course_purchege_cart_video .overlay .img {
+  position: relative;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.course_details .course_purchege_cart_body .price .header {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #15aabf;
+}
+.course_details .course_purchege_cart_body .price .paragraph {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #424242;
+}
+.course_details .course_purchege_cart_body .action .btn_primary {
+  padding: 10px 30px;
+}
+
+.register_box {
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+}
+.register_box .heading .header {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #036a99;
+}
+.register_box .heading .paragraph {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #525252;
+}
+.register_box .register_form label {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #525252;
+}
+.register_box .register_form .form_control {
+  padding: 25px 15px;
+  border: 1px solid transparent;
+  box-shadow: 0 0.125rem 0.25rem rgba(3, 106, 153, 0.075);
+}
+.register_box .register_form .form_control::placeholder {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #525252;
+}
+.register_box .btn_primary {
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+.contact_page .contact_text {
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #424242;
+}
+
+.footer {
+  background-color: #324b50;
+}
+.footer_link_section .footer_text .paragraph {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.85);
+}
+.footer_link_section .footer_text .footer_social_icons .icon_link i {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  box-shadow: 0 0.5rem 1rem rgba(3, 106, 153, 0.15);
+  background-color: #15aabf;
+  line-height: 35px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+}
+.footer_link_section .footer_text .footer_social_icons .icon_link i:hover {
+  color: #00758a;
+}
+.footer_link_section .footer_link .header {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  color: #ffffff;
+}
+.footer_link_section .footer_link .link {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.85);
+  transition: all 300ms ease-in-out;
+  margin-top: 10px;
+  display: inline-block;
+}
+.footer_link_section .footer_link .link:hover {
+  color: #15aabf;
+}
+.footer_link_section .footer_address .header {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  color: #ffffff;
+}
+.footer_link_section .footer_address .link {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 18px;
+}
+.footer_copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer_copyright_text {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.back_to_top_btn {
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  z-index: 1020;
+  display: none;
+}
+.back_to_top_btn i {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: rgba(3, 106, 153, 0.1);
+  color: #15aabf;
+}
+
+.page_title {
+  background: url("../images/page-title/1.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #15aabf;
+  position: relative;
+}
+.page_title::after {
+  position: absolute;
+  content: "";
+  background: url("../images/page-title/2.png");
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+  bottom: 0;
+}
+.page_title .page_title_container {
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+.page_title .page_title_container .page_title_heading .header {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #ffffff;
+}
+.page_title .page_title_container .breadcrumb {
+  background-color: rgba(3, 106, 153, 0.1);
+}
+.page_title .page_title_container .breadcrumb .breadcrumb_item {
+  font-family: "Barlow", "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #ffffff;
+}
+.page_title .page_title_container .breadcrumb .breadcrumb_item.active {
+  color: #036a99;
+}
+.page_title .page_title_container .breadcrumb .breadcrumb_item.active a {
+  color: #036a99;
+}
+.page_title .page_title_container .breadcrumb .breadcrumb_item a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.page_title .page_title_container .breadcrumb .breadcrumb_item a:hover {
+  color: #036a99;
+}
+
+@media (max-width: 1199.98px) {
+  .page_title .svg_container {
+    bottom: -100px;
+  }
+
+  .banner .banner_svg {
+    bottom: -160px;
+  }
+
+  .search_box .search_box_form {
+    padding: 30px 30px;
+  }
+  .search_box .search_box_form .form_control {
+    padding: 10px 10px 10px 10px;
+    width: 600px;
+  }
+  .search_box .search_box_form .form_control::placeholder {
+    font-size: 14px;
+  }
+  .search_box .search_box_form .search_box_btn {
+    padding: 0px 25px;
+  }
+  .search_box .search_box_form .search_box_btn i {
+    font-size: 16px;
+  }
+
+  .register_box .register_form .form_control::placeholder {
+    font-family: "Barlow", "Baloo Da 2", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 0px;
+    color: #525252;
+  }
+}
+@media (max-width: 991.98px) {
+  .page_title .svg_container {
+    bottom: -85px;
+  }
+
+  .navbar_main.sps--abv .navbar_nav .nav_item .nav_link {
+    padding: 15px 10px;
+  }
+
+  .navbar_main.sps--blw .navbar_nav .nav_item .nav_link {
+    padding: 15px 10px;
+  }
+
+  .banner .banner_svg {
+    bottom: -130px;
+  }
+
+  .search_box .search_box_form .form_control {
+    width: 350px;
+  }
+}
+@media (max-width: 767.98px) {
+  .page_title .svg_container {
+    bottom: -25px;
+  }
+
+  .banner .banner_svg {
+    bottom: -100px;
+  }
+
+  .tesimonials_text .paragraph {
+    width: 80%;
+  }
+}
+@media (max-width: 575.98px) {
+  .page_title .svg_container {
+    bottom: -5px;
+  }
+
+  .banner .banner_svg {
+    bottom: -60px;
+  }
+
+  .search_box .search_box_form {
+    padding: 20px 20px;
+  }
+  .search_box .search_box_form .form_control {
+    padding: 10px 5px 10px 5px;
+    width: 170px;
+  }
+  .search_box .search_box_form .form_control::placeholder {
+    font-size: 12px;
+  }
+  .search_box .search_box_form .search_box_btn {
+    padding: 0px 15px;
+  }
+  .search_box .search_box_form .search_box_btn i {
+    font-size: 16px;
+  }
+
+  .tesimonials_text .paragraph {
+    width: 100%;
+  }
+}

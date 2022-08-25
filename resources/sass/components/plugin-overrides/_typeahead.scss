@@ -1,0 +1,61 @@
+/* Typeahead */
+.gist,
+.tt-menu {
+  text-align: left;
+}
+
+.twitter-typeahead {
+  max-width: 100%;
+}
+
+.tt-hint,
+.tt-query,
+.typeahead {
+  @extend .form-control;
+}
+
+.typeahead {
+  background-color: #fff;
+
+  &:focus {
+    border-color: $border-color;
+  }
+}
+
+.tt-query {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+  color: color(gray);
+}
+
+.tt-menu {
+  width: 100%;
+  margin: 12px 0;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.tt-suggestion {
+  padding: 3px 20px;
+  font-size: inherit;
+
+  &:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: theme-color(primary);
+  }
+
+  .tt-cursor {
+    color: #fff;
+    background-color: theme-color(primary);
+  }
+
+  p {
+    margin: 0;
+  }
+}

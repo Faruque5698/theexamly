@@ -1,0 +1,37 @@
+@media print {
+	.pagebreak { page-break-before: always; } /* page-break-after works, as well */
+        body{
+		-webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+        }
+	.first_name {
+            position: relative;
+            margin-bottom: 3px;
+        }
+
+        .first_name::before {
+            position: absolute;
+            content:"";
+            height:5px;
+            width:220px;
+            background:#3377ff;
+            bottom:0;
+            left:70px;
+        }
+
+        .second_name {
+            position: relative;
+            margin-bottom: 3px;
+        }
+
+        .second_name::before {
+            position: absolute;
+            content:"";
+            background:#3377ff;
+            bottom:-20px;
+            height:10px;
+            width:404px;
+            left:-23px;
+            
+        }
+}

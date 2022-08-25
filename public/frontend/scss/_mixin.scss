@@ -1,0 +1,88 @@
+// text common poroperty
+@mixin text_property(
+  $fontFamily: $font_family_Primary,
+  $fontSize: $font_size_body_14,
+  $fontWeight: $font_weight_normal,
+  $lh: $lh_sm,
+  $textColor: $text_color_body
+) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lh;
+  color: $textColor;
+}
+
+// section common poroperty
+@mixin section_property($padding: 80px 0px) {
+  padding: $padding;
+}
+
+// btn_primary
+
+@mixin btn_primary(
+  $backgroundColor: colorOpacity($primary_color_gradiant_first, 0.1),
+  $color: $text_color_primary,
+  $padding: 10px 10px,
+  $fontSize: $font_size_subtitle_16,
+  $borderRadius: 50px,
+  $hoverBackgroundColor: $primary_color_gradiant_first,
+  $hoverColor: $white_color
+) {
+  padding: $padding;
+  background-color: $backgroundColor;
+  color: $color;
+  font-size: $fontSize;
+  position: relative;
+  border-radius: $borderRadius;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid transparent;
+  span {
+    z-index: 1;
+    position: relative;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50px;
+    transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+    transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+      transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+    background-color: $hoverBackgroundColor;
+    opacity: 0;
+  }
+  &:hover {
+    span {
+      color: $hoverColor;
+    }
+    &::before {
+      opacity: 1;
+      transition-duration: 0.85s;
+      transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+    }
+  }
+}
+
+// single line dots
+@mixin line_dots {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// multi line dots
+@mixin multi_line_dots($lines) {
+  max-width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+}

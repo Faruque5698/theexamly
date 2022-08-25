@@ -1,0 +1,54 @@
+.page_title {
+  background: url("../images/page-title/1.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $secondary_color;
+  position: relative;
+
+  .page_title_container {
+    padding-top: 100px;
+    padding-bottom: 200px;
+    .page_title_heading {
+      .header {
+        @include text_property(
+          $fontFamily: $font_family_Primary,
+          $fontSize: $font_size_header_35,
+          $fontWeight: $font_weight_normal,
+          $lh: $lh_sm,
+          $textColor: $white_color
+        );
+      }
+    }
+    .breadcrumb {
+      background-color: primaryColorOpacity(0.1);
+      .breadcrumb_item {
+        @include text_property(
+          $fontFamily: $font_family_Primary,
+          $fontSize: $font_size_subtitle_16,
+          $fontWeight: $font_weight_normal,
+          $lh: $lh_sm,
+          $textColor: $white_color
+        );
+        &.active {
+          a {
+            color: $primary_color;
+          }
+        }
+        & a {
+          color: $white_color;
+          text-decoration: none;
+          &:hover {
+            color: $primary_color;
+          }
+        }
+      }
+    }
+  }
+  .svg_container {
+    position: absolute;
+    width: 100%;
+    bottom: -145px;
+    left: 0;
+  }
+}

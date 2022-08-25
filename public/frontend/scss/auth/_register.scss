@@ -1,0 +1,56 @@
+.register {
+  &_box {
+    box-shadow: $shadow;
+    .heading {
+      .header {
+        @include text_property(
+          $fontFamily: $font_family_Primary,
+          $fontSize: $font_size_header_35,
+          $fontWeight: $font_weight_bold,
+          $lh: $lh_sm,
+          $textColor: $primary_color
+        );
+      }
+      .paragraph {
+        @include text_property(
+          $fontFamily: $font_family_Primary,
+          $fontSize: $font_size_subtitle_16,
+          $fontWeight: $font_weight_normal,
+          $lh: $lh_sm,
+          $textColor: $text_color_third
+        );
+      }
+    }
+
+    .register_form {
+      label {
+        @include text_property(
+          $fontFamily: $font_family_Primary,
+          $fontSize: $font_size_subtitle_16,
+          $fontWeight: $font_weight_normal,
+          $lh: $lh_sm,
+          $textColor: $text_color_third
+        );
+      }
+      .form_control {
+        padding: 25px 15px;
+        border: 1px solid transparent;
+        box-shadow: $shadow-sm;
+        &::placeholder {
+          @include text_property(
+            $fontFamily: $font_family_Primary,
+            $fontSize: $font_size_subtitle_16,
+            $fontWeight: $font_weight_normal,
+            $lh: $lh_sm,
+            $textColor: $text_color_third
+          );
+        }
+      }
+    }
+
+    .btn_primary {
+      border-radius: 5px;
+      padding: 10px 15px;
+    }
+  }
+}

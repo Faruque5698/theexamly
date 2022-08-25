@@ -1,0 +1,72 @@
+.footer {
+  background-color: $sixth_color;
+  &_link_section {
+    .footer_text {
+      .paragraph {
+        @include text_property(
+          $fontFamily: $font_family_Primary,
+          $fontSize: $font_size_body_14,
+          $fontWeight: $font_weight_normal,
+          $lh: $lh_sm,
+          $textColor: colorOpacity($white_color, 0.85)
+        );
+      }
+      .footer_social_icons {
+        .icon_link {
+          i {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            box-shadow: $shadow;
+            background-color: $secondary_color;
+            line-height: 35px;
+            text-align: center;
+            color: $white_color;
+            font-size: $font_size_body_14;
+            &:hover {
+              color: $primary_color_gradiant_first;
+            }
+          }
+        }
+      }
+    }
+    .footer_link {
+      .header {
+        @include text_property(
+          $fontFamily: $font_family_Primary,
+          $fontSize: $font_size_title_20,
+          $fontWeight: $font_weight_semi_bold,
+          $lh: $lh_1,
+          $textColor: $white_color
+        );
+      }
+      .link {
+        @include text_property(
+          $fontFamily: $font_family_Primary,
+          $fontSize: $font_size_body_14,
+          $fontWeight: $font_weight_normal,
+          $lh: $lh_1,
+          $textColor: colorOpacity($white_color, 0.85)
+        );
+        transition: transition(300ms, ease-in-out);
+        margin-top: 10px;
+        display: inline-block;
+        &:hover {
+          color: $secondary_color;
+        }
+      }
+    }
+  }
+  &_copyright {
+    border-top: 1px solid colorOpacity($white_color, 0.1);
+    &_text {
+      @include text_property(
+        $fontFamily: $font_family_Primary,
+        $fontSize: $font_size_body_14,
+        $fontWeight: $font_weight_light,
+        $lh: $lh_sm,
+        $textColor: colorOpacity($white_color, 0.85)
+      );
+    }
+  }
+}

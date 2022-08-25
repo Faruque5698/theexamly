@@ -1,0 +1,20 @@
+{
+    "name": "shurjopay/laravel",
+    "description": "Online Payment Gateway",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nazmus Shahadat",
+            "email": "nazmus.shahadat@shurjomukhi.com.bd"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+	"autoload": {
+        "psr-4": {
+            "shurjopay\\ShurjopayLaravelPackage\\": "src/"
+        }
+
+    }
+}

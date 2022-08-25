@@ -1,0 +1,58 @@
+// background color
+.bg_white {
+  background-color: $white_color !important;
+}
+
+// text
+.text_color_primary {
+  color: $text_color_primary;
+}
+
+.primary_color {
+  color: $primary_color;
+}
+.secondary_color {
+  color: $secondary_color;
+}
+.hover_primary_color {
+  &:hover {
+    color: $primary_color;
+  }
+}
+.hover_secondary_color {
+  &:hover {
+    color: $secondary_color;
+  }
+}
+
+// btn style
+.btn_primary {
+  @include btn_primary;
+}
+
+// ancor scroll
+// .margin_bottom {
+//   margin-bottom: 77px;
+// }
+
+.pagination {
+  .page_item {
+    &.active {
+      .page_link {
+        background-color: $primary_color !important;
+        color: $white_color;
+        border-color: $primary_color !important;
+      }
+    }
+    .page_link {
+      color: $text_color_primary;
+      &:hover {
+        background-color: $secondary_color;
+        color: $white_color;
+      }
+      &:focus {
+        box-shadow: unset;
+      }
+    }
+  }
+}

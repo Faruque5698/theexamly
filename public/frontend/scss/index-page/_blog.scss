@@ -1,0 +1,88 @@
+.blog {
+  padding-top: 80px;
+  padding-bottom: 50px;
+
+  &_text {
+    .header {
+      @include text_property(
+        $fontFamily: $font_family_Primary,
+        $fontSize: $font_size_header_35,
+        $fontWeight: $font_weight_semi_bold,
+        $lh: $lh_1,
+        $textColor: $text_color_secondary
+      );
+    }
+    .paragraph {
+      @include text_property(
+        $fontFamily: $font_family_Primary,
+        $fontSize: $font_size_subtitle_16,
+        $fontWeight: $font_weight_normal,
+        $lh: $lh_sm,
+        $textColor: $text_color_third
+      );
+    }
+
+    .blog_text_action {
+      .btn_primary {
+        @include btn_primary(
+          $backgroundColor: colorOpacity($primary_color_gradiant_first, 0.1),
+          $color: $text_color_primary,
+          $padding: 10px 15px,
+          $fontSize: $font_size_subtitle_16,
+          $borderRadius: 5px,
+          $hoverBackgroundColor: $primary_color_gradiant_first,
+          $hoverColor: $white_color
+        );
+      }
+    }
+  }
+
+  .single_blog {
+    border-radius: 5px;
+    box-shadow: $shadow;
+    margin-bottom: 30px;
+    .blog_body {
+      .title {
+        @include text_property(
+          $fontFamily: $font_family_Primary,
+          $fontSize: $font_size_subtitle_16,
+          $fontWeight: $font_weight_semi_bold,
+          $lh: $lh_1,
+          $textColor: $text_color_secondary
+        );
+        @include line_dots;
+        transition: transition(300ms, ease-in-out);
+        &:hover {
+          color: $secondary_color;
+        }
+      }
+
+      .paragraph {
+        @include text_property(
+          $fontFamily: $font_family_Primary,
+          $fontSize: $font_size_body_14,
+          $fontWeight: $font_weight_normal,
+          $lh: $lh_base,
+          $textColor: $text_color_third
+        );
+
+        @include multi_line_dots(3);
+        padding: 7px 0px;
+      }
+
+      .blog_action {
+        .btn_primary {
+          @include btn_primary(
+            $backgroundColor: colorOpacity($primary_color_gradiant_first, 0.1),
+            $color: $text_color_primary,
+            $padding: 5px 10px,
+            $fontSize: $font_size_subtitle_16,
+            $borderRadius: 50px,
+            $hoverBackgroundColor: $primary_color_gradiant_first,
+            $hoverColor: $white_color
+          );
+        }
+      }
+    }
+  }
+}

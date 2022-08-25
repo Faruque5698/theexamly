@@ -1,0 +1,113 @@
+.tesimonials {
+  padding-top: 50px;
+
+  &_text {
+    .header {
+      @include text_property(
+        $fontFamily: $font_family_Primary,
+        $fontSize: $font_size_header_35,
+        $fontWeight: $font_weight_semi_bold,
+        $lh: $lh_1,
+        $textColor: $text_color_secondary
+      );
+    }
+    .paragraph {
+      @include text_property(
+        $fontFamily: $font_family_Primary,
+        $fontSize: $font_size_subtitle_16,
+        $fontWeight: $font_weight_normal,
+        $lh: $lh_sm,
+        $textColor: $text_color_third
+      );
+      width: 50%;
+    }
+  }
+
+  &_slider {
+    .carousel {
+      &_indicators {
+        position: absolute;
+        right: 0;
+        bottom: 60px;
+        left: 0;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        margin-right: 15%;
+        margin-left: 15%;
+        list-style: none;
+        align-items: center;
+        &_list {
+          box-sizing: content-box;
+          flex: 0 1 auto;
+          width: 50px;
+          height: 50px;
+          margin-right: 5px;
+          margin-left: 5px;
+          text-indent: unset;
+          cursor: pointer;
+          background-color: unset;
+          background-clip: padding-box;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          opacity: 0.5;
+          transition: opacity 0.6s ease;
+          &.active {
+            opacity: 1;
+            width: 55px;
+            height: 55px;
+
+            .carousel_indicators_image {
+              .img {
+                box-shadow: $shadow;
+              }
+            }
+          }
+        }
+      }
+
+      .carousel_inner {
+        box-shadow: $shadow;
+        .carousel_item {
+          padding-top: 70px;
+          padding-bottom: 121px;
+
+          .paragraph {
+            @include text_property(
+              $fontFamily: $font_family_Primary,
+              $fontSize: $font_size_subtitle_16,
+              $fontWeight: $font_weight_normal,
+              $lh: $lh_sm,
+              $textColor: $text_color_third
+            );
+            @include multi_line_dots(3);
+          }
+
+          .header {
+            @include text_property(
+              $fontFamily: $font_family_Primary,
+              $fontSize: $font_size_title_20,
+              $fontWeight: $font_weight_semi_bold,
+              $lh: $lh_1,
+              $textColor: $text_color_secondary
+            );
+            span {
+              color: $primary_color_gradiant_first;
+            }
+          }
+
+          .sub_header {
+            @include text_property(
+              $fontFamily: $font_family_Primary,
+              $fontSize: $font_size_body_14,
+              $fontWeight: $font_weight_normal,
+              $lh: $lh_sm,
+              $textColor: $text_color_third
+            );
+          }
+        }
+      }
+    }
+  }
+}

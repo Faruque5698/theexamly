@@ -1,0 +1,15 @@
+.nav-container {
+    position: relative;
+}
+
+.button-custom {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.student-dm.table td, 
+.student-dm.table th{
+    white-space: normal;
+}

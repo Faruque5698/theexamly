@@ -1,0 +1,27 @@
+.user-avatar {
+  position: relative;
+  .edit-avatar-icon {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 2px solid $circle-img-border;
+    position: absolute;
+    background-color: #d8d8d8;
+    bottom: 0;
+    right: -10px;
+    @include display-flex;
+    @include align-items(center);
+    @include justify-content(center);
+  }
+}
+.wrapper {
+  .image-grouped {
+    .text-avatar {
+      border: 4px solid $circle-border;
+      text-align: center;
+      &:hover {
+        border: 0;
+      }
+    }
+  }
+}

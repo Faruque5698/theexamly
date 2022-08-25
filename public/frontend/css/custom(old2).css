@@ -1,0 +1,156 @@
+.about_us {
+    padding: 80px 0px;
+}
+
+.about_us_text a {
+    color: #15aabf;
+}
+.about_us_text a:hover {
+    color: #15aabf;
+}
+.why_us_list .text {
+    text-align: justify;
+}
+.why_us_list .text p {
+    margin-bottom: 5px;
+}
+
+.footer_link_section .footer_address  .footer_social_icons .icon_link i{
+
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    box-shadow: 0 0.5rem 1rem rgb(3 106 153 / 15%);
+    background-color: #15aabf;
+    line-height: 35px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+}
+.confirmation .list_item{
+    font-size: 15px;
+    display: inline-block;
+}
+.shurjoPay{
+    background-color: white;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.logo{
+    width: 236px;
+    object-fit: contain;
+}
+.left_navbar_top {
+    text-align: center;
+    margin-bottom: 4px;
+}
+.notice{
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: justify;
+    font-size: 17px;
+    animation: color-change 10s infinite;
+}
+@keyframes color-change {
+      0% { color: #15AABF; }
+      50% { color: #15AABF; }
+      100% { color: blue; }
+}
+.akhane{
+    text-decoration: underline;
+}
+
+.notice2{
+    animation: color-change2 10s infinite;
+    font-weight: 600;
+}
+@keyframes color-change2 {
+      0% { color: #15AABF; }
+      50% { color: #15AABF; }
+      100% { color: blue; }
+}
+
+.course_image .img-fluid{
+    
+}
+
+.single_courses.user_alert{
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #00758a;
+}
+
+.single_courses.user_alert .add_to_cart{
+    color: #fff;
+    background: #15aabf;
+    padding: 8px 18px;
+    border-radius: 25px;
+    white-space: nowrap;
+    margin-left: 1rem;
+}
+.single_courses.user_alert .add_to_cart:hover{
+    color: #fff !important;
+    background: #00758a;
+}
+
+.navbar-toggler-icon i{
+    padding-top: 6px;
+}
+.footer_logo{
+    margin-bottom: 12px;
+}
+
+@media (max-width: 575.98px){
+    .logo{
+        width: 200px;
+    }
+    .single_courses.user_alert{
+        padding: 16px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .single_courses.user_alert .add_to_cart{
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
+
+
+.preview_slide.advertisement{
+    padding: 0 !important;
+}
+
+.add-wrap{
+    background: #f8f8f8;
+    padding: 32px;
+    border-radius: 24px;    
+}
+
+.add-wrap .custom-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-wrap .custom-flex .add_image{
+    width: 100%;
+}
+
+.add-wrap .custom-flex .add_image img{
+    width: 100%;
+    border-radius: 12px;
+}
+
+@media (max-width: 767.98px){
+    .add-wrap .custom-flex .add_image img{
+        margin-top: 32px;
+    }
+}
+
+.about_us_video{
+    border-radius: 6px;
+}

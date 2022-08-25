@@ -1,0 +1,309 @@
+.courses_filter {
+  @include section_property(80px 0px);
+  .courses_sidebar_filter {
+    .courses_free_or__paid {
+      padding: 15px 25px;
+
+      box-shadow: $shadow;
+      &_form {
+        &_label {
+          display: block;
+          position: relative;
+          padding-left: 35px;
+
+          cursor: pointer;
+          font-size: $font_size_subtitle_16;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+          }
+
+          .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: $secondary_color;
+          }
+
+          input:checked ~ .checkmark {
+            background-color: $secondary_color;
+          }
+
+          input:checked ~ .checkmark:after {
+            display: block;
+          }
+          .checkmark:after {
+            left: 9px;
+            top: 3px;
+            width: 8px;
+            height: 15px;
+            border: solid $white_color;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+        }
+
+        .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+      }
+    }
+
+    .courses_category {
+      box-shadow: $shadow;
+      &_accordion {
+        .accordion_card {
+          background-color: unset;
+          border: unset;
+          border-radius: unset;
+
+          .accordion_header {
+            padding: unset;
+            background-color: unset;
+            border-bottom: unset;
+            .header {
+              @include text_property(
+                $fontFamily: $font_family_Primary,
+                $fontSize: $font_size_subtitle_16,
+                $fontWeight: $font_weight_normal,
+                $lh: $lh_1,
+                $textColor: $secondary_color
+              );
+              &:hover {
+                background-color: colorOpacity($grey_color, 0.1);
+              }
+
+              position: relative;
+              cursor: pointer;
+              padding: 15px 20px;
+
+              &::before {
+                font-family: "Font Awesome 5 Free";
+                content: "\f077";
+
+                top: 50%;
+                right: 10px;
+
+                color: $secondary_color;
+                position: absolute;
+                font-size: $font_size_subtitle_16;
+                font-weight: 700;
+                transform: translateY(-50%);
+              }
+              &:not(.collapsed) {
+                background-color: colorOpacity($secondary_color, 0.05);
+              }
+              &.collapsed {
+                color: $text_color_secondary;
+                font-weight: $font_weight_medium;
+
+                &::before {
+                  font-family: "Font Awesome 5 Free";
+
+                  content: "\f078";
+                  top: 50%;
+                  right: 10px;
+                  color: $text_color_secondary;
+                  position: absolute;
+                  font-size: $font_size_subtitle_16;
+                  font-weight: 700;
+                  transform: translateY(-50%);
+                }
+              }
+            }
+          }
+          .accordion_body {
+            padding: 0px;
+            .sub_menu {
+              // subMenu dropdown
+              .courses_category_accordion {
+                .accordion_card {
+                  .accordion_header {
+                    .header {
+                      padding: 15px 25px;
+                      @include text_property(
+                        $fontFamily: $font_family_Primary,
+                        $fontSize: $font_size_body_14,
+                        $fontWeight: $font_weight_normal,
+                        $lh: $lh_1,
+                        $textColor: $text_color_secondary
+                      );
+                    }
+                  }
+                  .accordion_body {
+                    .sub_menu {
+                      &_link {
+                        padding: 15px 30px;
+                        @include text_property(
+                          $fontFamily: $font_family_Primary,
+                          $fontSize: $font_size_body_14,
+                          $fontWeight: $font_weight_normal,
+                          $lh: $lh_1,
+                          $textColor: $text_color_secondary
+                        );
+                      }
+                    }
+                  }
+                }
+              }
+
+              // sub dropdown link
+              &_link {
+                display: block;
+                padding: 15px 25px;
+                text-decoration: none;
+
+                @include text_property(
+                  $fontFamily: $font_family_Primary,
+                  $fontSize: $font_size_body_14,
+                  $fontWeight: $font_weight_normal,
+                  $lh: $lh_1,
+                  $textColor: $text_color_secondary
+                );
+
+                position: relative;
+                &.active {
+                  background-color: colorOpacity($grey_color, 0.1);
+                  @include text_property(
+                    $fontFamily: $font_family_Primary,
+                    $fontSize: $font_size_subtitle_16,
+                    $fontWeight: $font_weight_medium,
+                    $lh: $lh_1,
+                    $textColor: $secondary_color !important
+                  );
+                  &::before {
+                    color: $secondary_color;
+                  }
+                }
+                &:hover {
+                  background-color: colorOpacity($grey_color, 0.1);
+                }
+
+                &::before {
+                  font-family: "Font Awesome 5 Free";
+                  position: absolute;
+                  content: "\f054";
+                  top: 50%;
+                  right: 10px;
+                  color: $text_color_secondary;
+                  position: absolute;
+                  font-size: $font_size_subtitle_16;
+                  font-weight: 700;
+                  transform: translateY(-50%);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .courses_heading_filter {
+    .sort_filter {
+      .form_control {
+        color: $text_color_secondary;
+
+        &:focus {
+          border-color: $primary_color;
+          box-shadow: unset;
+        }
+      }
+    }
+  }
+
+  .single_courses {
+    border-radius: 5px;
+    margin-bottom: 30px;
+    box-shadow: $shadow;
+    .course_body {
+      .title {
+        @include text_property(
+          $fontFamily: $font_family_Primary,
+          $fontSize: $font_size_subtitle_16,
+          $fontWeight: $font_weight_semi_bold,
+          $lh: $lh_sm,
+          $textColor: $text_color_secondary
+        );
+        @include line_dots;
+        transition: transition(300ms, ease-in-out);
+        &:hover {
+          color: $secondary_color;
+        }
+      }
+      .sub_title {
+        @include text_property(
+          $fontFamily: $font_family_Primary,
+          $fontSize: $font_size_caption_12,
+          $fontWeight: $font_weight_normal,
+          $lh: $lh_sm,
+          $textColor: $text_color_third
+        );
+      }
+      .courses_footer {
+        .course_info {
+          .amount {
+            padding: 2px 5px;
+            border-radius: 50px;
+            background-color: colorOpacity($fourth_color, 0.1);
+            @include text_property(
+              $fontFamily: $font_family_Primary,
+              $fontSize: $font_size_body_14,
+              $fontWeight: $font_weight_normal,
+              $lh: $lh_1,
+              $textColor: $fourth_color
+            );
+          }
+          .enrolled_users {
+            @extend .amount;
+            background-color: colorOpacity($fifth_color, 0.1);
+            @include text_property(
+              $fontFamily: $font_family_Primary,
+              $fontSize: $font_size_caption_12,
+              $fontWeight: $font_weight_normal,
+              $lh: $lh_1,
+              $textColor: $fifth_color
+            );
+          }
+          .course_duration {
+            @extend .amount;
+            background-color: colorOpacity($third_color, 0.1);
+            @include text_property(
+              $fontFamily: $font_family_Primary,
+              $fontSize: $font_size_caption_12,
+              $fontWeight: $font_weight_normal,
+              $lh: $lh_1,
+              $textColor: $third_color
+            );
+          }
+        }
+        .course_action {
+          .btn_primary {
+            @include btn_primary(
+              $backgroundColor: colorOpacity($primary_color_gradiant_first, 0.1),
+              $color: $text_color_primary,
+              $padding: 5px 5px,
+              $fontSize: $font_size_caption_12,
+              $borderRadius: 50px,
+              $hoverBackgroundColor: $primary_color_gradiant_first,
+              $hoverColor: $white_color
+            );
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+// config variable
+@import "./font";
+@import "./color";
+@import "./function";
+@import "./mixin";
+@import "./config";
+@import "./class";
+
+// common
+@import "./common/navbar_top";
+@import "./common/navbar_main";
+
+// index page
+@import "./index-page/banner";
+@import "./index-page/top_courses";
+@import "./index-page/search_box";
+@import "./index-page/top_books";
+@import "./index-page/achievements";
+@import "./index-page/tesimonials";
+@import "./index-page/blog";
+
+// course
+@import "./courses/courses_filter";
+@import "./courses/course_details";
+
+// auth
+@import "./auth/register";
+
+// common
+@import "./common/footer";
+@import "./common/back_to_top";
+@import "./common/page_title";
+
+// responsive
+@import "./responsive";

@@ -1,0 +1,32 @@
+.navbar_top {
+  background-color: $seventh_color;
+  .left_navbar_top {
+    font-size: $font_size_body_14;
+    .link {
+      @include text_property(
+        $fontFamily: $font_family_Primary,
+        $fontSize: $font_size_body_14,
+        $fontWeight: $font_weight_normal,
+        $lh: $lh_1,
+        $textColor: $secondary_color
+      );
+
+      &:hover {
+        color: $primary_color;
+      }
+    }
+  }
+  .right_navbar_top {
+    .btn_primary {
+      @include btn_primary(
+        $backgroundColor: colorOpacity($primary_color_gradiant_first, 0.1),
+        $color: $text_color_primary,
+        $padding: 8px 15px,
+        $fontSize: $font_size_body_14,
+        $borderRadius: 50px,
+        $hoverBackgroundColor: $primary_color_gradiant_first,
+        $hoverColor: $white_color
+      );
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.achievements {
+  padding-top: 50px;
+  &_content_text {
+    .header {
+      @include text_property(
+        $fontFamily: $font_family_Primary,
+        $fontSize: $font_size_header_35,
+        $fontWeight: $font_weight_semi_bold,
+        $lh: $lh_1,
+        $textColor: $text_color_secondary
+      );
+    }
+    .paragraph {
+      @include text_property(
+        $fontFamily: $font_family_Primary,
+        $fontSize: $font_size_subtitle_16,
+        $fontWeight: $font_weight_normal,
+        $lh: $lh_sm,
+        $textColor: $text_color_third
+      );
+    }
+  }
+  .single_achivement {
+    box-shadow: $shadow;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    .icon {
+      i {
+        padding: 15px;
+        background-color: $primary_color_gradiant_first;
+        border-radius: 50px;
+        color: $white_color;
+        font-size: $font_size_title_20;
+      }
+    }
+
+    .header {
+      @include text_property(
+        $fontFamily: $font_family_Primary,
+        $fontSize: $font_size_title_20,
+        $fontWeight: $font_weight_semi_bold,
+        $lh: $lh_1,
+        $textColor: $text_color_secondary
+      );
+    }
+    .paragraph {
+      @include text_property(
+        $fontFamily: $font_family_Primary,
+        $fontSize: $font_size_body_14,
+        $fontWeight: $font_weight_normal,
+        $lh: $lh_sm,
+        $textColor: $text_color_third
+      );
+    }
+  }
+}

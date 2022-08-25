@@ -1,0 +1,145 @@
+// Large devices (desktops, less than 1200px)lg
+@media (max-width: 1199.98px) {
+  // global page
+  .page_title .svg_container {
+    bottom: -100px;
+  }
+  // banner
+  .banner .banner_svg {
+    bottom: -160px;
+  }
+  // search box
+  .search_box {
+    .search_box_form {
+      padding: 30px 30px;
+
+      .form_control {
+        padding: 10px 10px 10px 10px;
+
+        width: 600px;
+
+        &::placeholder {
+          font-size: $font_size_body_14;
+        }
+      }
+
+      .search_box_btn {
+        i {
+          font-size: $font_size_subtitle_16;
+        }
+
+        padding: 0px 25px;
+      }
+    }
+  }
+
+  // register page
+
+  .register {
+    &_box {
+      .register_form {
+        .form_control {
+          &::placeholder {
+            @include text_property(
+              $fontFamily: $font_family_Primary,
+              $fontSize: $font_size_subtitle_16,
+              $fontWeight: $font_weight_normal,
+              $lh: 0px,
+              $textColor: $text_color_third
+            );
+          }
+        }
+      }
+    }
+  }
+  // end index page
+}
+// Medium devices (tablets, less than 992px)md
+@media (max-width: 991.98px) {
+  // global page
+  .page_title .svg_container {
+    bottom: -85px;
+  }
+  // main nav
+  .navbar_main.sps--abv .navbar_nav .nav_item .nav_link {
+    padding: 15px 10px;
+  }
+
+  .navbar_main.sps--blw .navbar_nav .nav_item .nav_link {
+    padding: 15px 10px;
+  }
+
+  // banner
+  .banner .banner_svg {
+    bottom: -130px;
+  }
+  // search box
+  .search_box {
+    .search_box_form {
+      .form_control {
+        width: 350px;
+      }
+    }
+  }
+}
+// Small devices (landscape phones, less than 768px)sm
+@media (max-width: 767.98px) {
+  // global page
+
+  .page_title .svg_container {
+    bottom: -25px;
+  }
+  // banner
+  .banner .banner_svg {
+    bottom: -100px;
+  }
+
+  // tesimonials
+  .tesimonials_text .paragraph {
+    width: 80%;
+  }
+}
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  // global page
+
+  .page_title .svg_container {
+    bottom: -5px;
+  }
+  // banner
+  .banner .banner_svg {
+    bottom: -60px;
+  }
+
+  // search box
+  .search_box {
+    .search_box_form {
+      padding: 20px 20px;
+
+      .form_control {
+        padding: 10px 5px 10px 5px;
+
+        width: 170px;
+
+        &::placeholder {
+          font-size: $font_size_caption_12;
+        }
+      }
+
+      .search_box_btn {
+        i {
+          font-size: $font_size_subtitle_16;
+        }
+
+        padding: 0px 15px;
+      }
+    }
+  }
+
+  // tesimonials
+  .tesimonials_text .paragraph {
+    width: 100%;
+  }
+
+  // end
+}
